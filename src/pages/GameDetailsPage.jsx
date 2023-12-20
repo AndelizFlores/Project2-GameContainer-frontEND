@@ -266,16 +266,16 @@ function GameDetailsPage() {
                     <form onSubmit={(e) => handleReviewUpdate(e, review.id)}>
                       <label>
                         Edit Review
-                        <input
+                        <input className="inputEDIT"  //texteara maybe?
                           name="review"
                           onChange={handleReviewChange}
                           value={reviewToUpdate.review}
                           type="text"
-                          style={{ width: "20vw" }}
-                        />
+                          style={{ width: "400px"}}
+                       />
                       </label>
                       <label>
-                        Rating
+                        <p>Rating</p>
                         <select
                           name="program"
                           onChange={(e) =>

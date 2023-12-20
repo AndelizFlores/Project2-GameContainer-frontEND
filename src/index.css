@@ -692,8 +692,18 @@ transition: 2s;
   border-radius: 4px;
   padding: .5rem;
 }
-
-
+/*Details Edit form*/
+.inputEDIT{
+width: 100%;
+height: 35px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 0.25rem;
+margin-bottom: 0.5rem;
+margin-left: -0.1rem; 
+box-shadow: inset 0 0 0 1px #009cff;
+outline: none;
+}
 /* .form-container button{
   display: flex;
   width: 95px;
