@@ -1,0 +1,778 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body,
+html {
+   font-family: sans-serif; 
+} */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/**/
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/* body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+} */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+/*Component Style*/  /*IMPORTANT*/
+.coverIMG{
+  /* display: block; Aparently with flex work the fixed  position without put it */
+  display: flex;
+  justify-content: space-evenly;
+  position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url('./assets/coverIMG.png');
+  background-position: fixed;
+  background-attachment: fixed;
+  background-size: cover;
+  /* position: fixed; */
+  background-repeat: no-repeat;
+  transition: all 0 0.5s ease; /*Dont know if work*/
+        /* padding-top: 8vh; PADDING
+        padding-left: 6vh;
+        padding-right: 0px;
+        padding-bottom: 2vh; */
+  /* scroll-behavior: smooth; */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*Page style*/
+
+.HomePage,
+.AllGames,
+.GameDetailsPage {
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  overflow-x: hidden;
+}
+
+/* .coverIMG {
+  width: 99vw
+} */
+
+.GameDetailsPage {
+  width: 100%;
+  /* overflow-x: hidden; */
+}
+
+/*Flip try*/
+.listGames{
+  /* display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  flex-flow: row-reverse wrap; */
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  justify-content: space-evenly;
+  padding:  0 20vh;
+  flex-wrap: wrap;
+}
+.CardList{
+  position: relative;
+  width: 300px;  /*300px*/
+  height: 350px; /*350px*/
+  margin: 20px;
+}
+.CardList .face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+.CardList .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+.CardList .front img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.CardList .front h3{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4) ;
+  text-align: center;
+}
+.CardList .back{
+  transform: perspective(600px) rotateY(180deg);
+  background: rgb(3,35,54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  box-shadow: 0 5px 10px #000;
+}
+.CardList .back .CardLinkDetails{
+  border-top: solid 1px #f3f3f3;
+  height: 50px;
+  line-height: 50px;
+}
+.CardList .back .CardLinkDetails a{
+  color: #f3f3f3;
+}
+.CardList .back .CardLinkDetails a:hover{
+  color: red;
+}
+.CardList .back h3{
+  font-size: 30px;
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+.CardList .back p{
+  letter-spacing: 1px;
+}
+.CardList:hover .front{
+  transform: perspective(600px) rotateY(180deg);
+}
+.CardList:hover .back{
+  transform: perspective(600px) rotateY(360deg);
+}
+/* navbar styles */
+
+.Navbar {
+  background-color: black; 
+  color: #ffffff; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 50;
+  overflow: hidden; /*new*/
+}
+.Link1-nav .Link2-nav{
+  padding: 10px 20px;  /*dont work*/
+}
+
+.info-nav{
+  display: flex;
+  height: 5rem;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.img-logo{
+  height: 2rem; 
+  width: auto; 
+}
+
+.button-img{
+  display: flex;
+  align-items: center; 
+  text-align: left;
+  padding: 1;
+  cursor: pointer;
+  height: 2.5rem; 
+  width: auto; 
+  border: 2px solid #ffffff; 
+  border-radius: 1.5rem; 
+  padding: 0.25rem; 
+  font-size: 1rem; 
+  padding-top: 0.25rem; 
+  padding-bottom: 0.25rem; 
+}
+
+.text-nav{
+  margin-left: 10px;
+}
+
+.text-xl{
+  text-align: center;
+  font-size: 1.25rem;
+  margin-right: 10px;
+}
+.list-Nav{
+  list-style: none;
+  margin-top: 30px;
+}
+.list-Nav li{
+  display: inline-block;
+  padding: 10px 10px;
+  font-size: 23px;
+  position: relative;
+  }
+.list-Nav li Link{
+   transition: all 0.3s ease 0s;
+    }
+.info-nav ul li::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #ececec;
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    transition: 0.5s;
+  }
+  .info-nav ul li:hover::after{
+    width: 100%;
+  }
+
+
+/*Search bar style*/
+.search-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.searchContainer{
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: 60px;
+  padding: 0 20px;
+  backdrop-filter: blur(4px) saturate(180%);
+}
+.searchContainer input{ 
+  background: transparent;
+  flex: 1;
+  border: 0;
+  outline: none;
+  padding: 24px 20px;
+  font-size: 20px;
+  color: #cac7ff;
+}
+::placeholder{
+  color: #cac7ff;
+}
+.searchContainer button img{
+  width: 25px;
+  background-color: transparent;
+}.searchContainer button{ 
+  border: 0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: #58629b;
+  cursor: pointer;
+}
+/*Home Page*/
+
+.img-homepage{
+  width: 100px;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+}
+.top-homepage{
+  display: flex;
+  height: 88%;
+  align-items: center;
+}
+.HomePage{
+  flex-basis: 50%;
+}
+.HomePage h1{
+  color: #fff;
+  font-size: 100px;
+}
+.HomePage p{
+  color: #fff;
+  font-size: 17px;
+  line-height: 22px;
+}
+.button-homepage {
+  background-image: url('./assets/searchbutton-homepage1.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400px 225px;
+  width: 400px;
+  height: 60px;
+  padding: 55px;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  display: inline-flex;
+  outline: none;
+  color: transparent;
+  transition: 2s;
+}
+  .button-homepage:hover {
+    transform: scale(1.1);
+  }
+
+  /*Not found Page*/
+
+.notfoundpage{
+  background-image: url(./assets/gif-notFound.gif);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+/*Detail Page*/
+.details h3{
+  align-items: center;
+  font-size: 70px;
+  justify-content: center;
+  display: flex;
+}
+.details .bg-detailsGame{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 10px;
+}
+.platform-container{
+display: flex;
+justify-content: space-between;
+padding-top: 50px;
+}
+.buttonDetailsEND{
+  display: inline-flex;
+  justify-content: flex-end;
+  float: inline-end;
+}
+.button-back{
+  background-image: url('./assets/backButton.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 400px 225px;
+  width: 400px;
+  height: 60px;
+  padding: 55px;
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  display: inline-flex;
+  outline: none;
+  color: transparent;
+  transition: 2s;
+}
+/*Details Tags*/
+.tags{
+  display: flex;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  justify-content: flex-start;
+  padding:  50px 10vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.tags1 p{
+  position: relative;
+  width: 100px;  /*300px*/
+  height: 20px; /*350px*/
+  margin: 10px;
+}
+
+.tags1.face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: .5s;
+}
+.tags1 .front{
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5px 10px #000;
+}
+.tags1 .front img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tags1 .front h3{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  background: rgba(0,0,0,.4) ;
+  text-align: center;
+}
+/*Details Screenshot*/
+
+.screenshots {
+  display: flex;
+  width: 900px;
+  height: 200px;
+}
+
+.screenshots img {
+  min-width: 0;
+  flex: 1 1 10px;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: blur(2px);
+  transition: 0.5s;
+}
+
+.screenshots img:hover {
+  flex: 1 1 300px;
+  opacity: 1;
+  filter: contrast(120%) blur(0px);
+}
+/*Details Platform*/
+
+.plat-DIV{
+  display: block;
+  float: left;
+  position: center;
+  width: 150px;
+  height: 30px;
+  justify-content: space-evenly;
+  text-align: center;
+  background: black;
+  /* a small margin to separate the blocks */
+  margin: 10px;
+  padding: 10px;
+}
+.platform2{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+/*Details Store*/
+.stores-container{
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  grid: center;
+  padding: 50px 50px;  */
+  display: grid;
+  grid-gap: 20px;
+  justify-content: space-evenly;
+  padding: 10px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.stores{
+  /* -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px; */
+  display: flex;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+  justify-content: flex-start;
+  padding:  50px 10vh;
+  flex-wrap: wrap;
+
+}
+
+.store-DIV{
+/* display: block;
+padding: 30px 20px;
+background-color: #121212;
+
+overflow: hidden;
+
+position: relative; */
+grid-column: 1 / span 2;
+float: left;
+justify-content: space-evenly;
+position: relative;
+position: relative;
+width: 300px;  /*300px*/
+height: 10px; /*350px*/
+margin: 10px;
+/*back design*/
+background-position: center;
+background-image: url('./assets/yellowLine.svg');
+background-size: 300px 200px;
+padding: 5px;
+background-repeat: no-repeat;
+background-color: #000;
+/* cursor: pointer; */
+appearance: none;
+background-color: inherit;
+display: inline-flex;
+outline: none;
+transition: 2s;
+
+}
+
+/*Form*/
+.form-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 600px;
+  margin: 1.5rem auto;
+
+  padding: 1.5rem; /* Add some padding to create the card effect */
+  border: 1px solid #ccc; /* Add a border to make it recognizable */
+  border-radius: 0.5rem; /* Rounded corners for the card */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the card */  
+}
+.form-container h3{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.form-container .reviewBOX textarea{
+  width: 100%;
+  height: 35px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-left: -0.1rem;
+}
+.form-container .reviewBOX textarea{
+  box-shadow: inset 0 0 0 1px #009cff;
+  outline: none;
+}
+.form-container .reviewBOX select{
+  border: 1px solid #ccc;
+  border-radius: 0.15rem;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+  display: block;
+  transform: scale(1.1);
+  }
+
+.form-container .reviewBOX label{
+    display: block;
+    text-align: left;
+    margin: 2rem;
+    height: 35px;
+
+  }
+
+.form-container form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #39777a;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+   width: 200px;
+  height: 40px;
+  padding: 0.2rem 1rem;
+  margin-top: 1rem;
+  background-color: #3490dc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+.form-container button:hover {
+  background: rgb(50, 177, 11);
+  color: #ff1212;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+.FormDIV{
+  width: 500px;
+  padding: 10px;
+  box-shadow: 0px 2px 3px grey;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* background: #94a7c8; */
+  border-radius: 4px;
+}
+.FormDIV .reviews-space{
+  border: 2px solid grey;
+  box-shadow: 0px 2px 3px grey;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: .5rem;
+}
+
+
+/* .form-container button{
+  display: flex;
+  width: 95px;
+  background-color: #ce7b2d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;}
+.form-container button:hover{
+  background-color: #eebd37;
+} */
+/*Scroll background*/
+
+/* scroll-container {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+} */
+
+  /* width: 180px;
+  color: #000;
+  font-size: 12px;
+  padding: 12px 0;
+  background: #fff;
+  border: 0;
+  border-radius: 20px;
+  outline: none;
+  margin-top: 30px; 
+}*/
+
+/* .searchContainer{
+  float: right;
+}
+.searchContainer.searchContainer-Button{
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+}
+.searchContainer.searchContainer-Button:hover{
+  background: red;
+} */
+
+
+
+/*New added */
+/* .AllGameslist{
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px #000;
+  padding: 10px;
+  text-align: center;
+  border: 2px solid #444;
+  grid-template-columns: repeat(4, 222px);
+}
+.listGames{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.IMG-gameList{
+  size: 10px;
+  display: inline-block;
+  }
+
+  display: grid;
+    grid-gap: 0 24px; */

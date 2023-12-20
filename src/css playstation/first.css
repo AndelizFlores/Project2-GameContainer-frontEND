@@ -1,0 +1,155 @@
+.column_Column__IeSH0 {
+    grid-column-end: span var(--grid-column-count,var(--grid-column-span));
+    grid-column-start: var(--grid-column-start)
+}
+
+@media(max-width: 767px) {
+    .column_Column__IeSH0 {
+        --grid-column-count:min(var(--grid-column-span),4)
+    }
+}
+
+@media(min-width: 1920px) {
+    .column_Column__IeSH0 {
+        grid-column-start:var(--grid-column-start-desktop,var(--grid-column-start,0));
+        --grid-column-count: calc(var(--grid-column-span) * 2)
+    }
+}
+
+.container_Container__qSIZW {
+    max-width: var(--grid-max-width);
+    margin-left: var(--grid-gutter);
+    margin-right: var(--grid-gutter)
+}
+
+.container_MarginBottom__3oG3D:not(:last-child) {
+    margin-block-end:var(--space-10)}
+
+.sub-grid_SubGrid__0oGMf {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-sub-columns,var(--grid-columns)),1fr);
+    grid-column-gap: var(--grid-gap);
+    --grid-column-start: 0;
+    --grid-column-start-desktop: 0
+}
+
+@media(min-width: 1920px) {
+    .sub-grid_SubGrid__0oGMf {
+        grid-template-columns:repeat(calc(var(--grid-sub-columns, calc(var(--grid-columns) / 2)) * 2),1fr)
+    }
+}
+
+.section_Section__5IIl3 {
+    padding-block-start:var(--space-top);padding-block-end: var(--space-bottom);
+    position: relative;
+    --slant-percentage: 90.6%
+}
+
+@media(min-width: 768px) {
+    .section_Section__5IIl3 {
+        --slant-percentage:72%
+    }
+}
+
+.section_BackgroundSlanted___MMoe {
+    -webkit-clip-path: polygon(-100% -100%,102% 0,100% var(--slant-percentage),0 100%);
+    clip-path: polygon(-100% -100%,102% 0,100% var(--slant-percentage),0 100%)
+}
+
+.section_Background__7qx2R {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none
+}
+
+.section_SectionFirst__0f2JC {
+    padding-block-start:calc(var(--space-11) + var(--space-top))}
+
+.section_SectionFirst__0f2JC .section_BackgroundAnimation__2O2Y3 {
+    background: rgba(var(--color-18-light),1) linear-gradient(155deg,#87ddff 0,#42affa 10%,#0c63df 25%,rgba(var(--color-18-light),1) 55%)
+}
+
+.section_BackgroundImage__m_1h7 {
+    pointer-events: none
+}
+
+.section_BackgroundImageMaskTop__DKbxE {
+    -webkit-mask: linear-gradient(transparent,#000) top,linear-gradient(#000,#000) top;
+    mask: linear-gradient(transparent,#000) top,linear-gradient(#000,#000) top;
+    -webkit-mask-size: 100% 600px,100% calc(100% - 600px);
+    mask-size: 100% 600px,100% calc(100% - 600px);
+    -webkit-mask-position: top,bottom;
+    mask-position: top,bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat
+}
+
+.section_BackgroundImageMaskBottom__pj5LM {
+    -webkit-mask: linear-gradient(#000,#000) top,linear-gradient(#000,transparent) top;
+    mask: linear-gradient(#000,#000) top,linear-gradient(#000,transparent) top;
+    -webkit-mask-size: 100% calc(100% - 600px),100% 600px;
+    mask-size: 100% calc(100% - 600px),100% 600px;
+    -webkit-mask-position: top,bottom;
+    mask-position: top,bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat
+}
+
+.section_BackgroundAnimation__2O2Y3 {
+    position: absolute;
+    -webkit-mask: linear-gradient(160deg,#000 50%,transparent 90%) top;
+    mask: linear-gradient(160deg,#000 50%,transparent 90%) top;
+    z-index: 50;
+    opacity: 0;
+    min-height: 900px
+}
+
+.section_BackgroundAnimationMaskBottom__CWiaq {
+    -webkit-mask: linear-gradient(175deg,#000 50%,transparent 80%) top;
+    mask: linear-gradient(175deg,#000 50%,transparent 80%) top;
+    -webkit-mask-position: top,bottom;
+    mask-position: top,bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat
+}
+
+.section_Content__MwYiN {
+    position: relative;
+    z-index: 50
+}
+
+@keyframes section_fade-in__fWzI4 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@media(min-width: 768px) {
+    html[dir=rtl] .footer_LogoColumn__QJxU8 {
+        direction:rtl;
+        order: 4
+    }
+
+    html[dir=rtl] .footer_CategoryColumn__zJ5_j {
+        direction: rtl
+    }
+
+    html[dir=rtl] .footer_CategoryColumn__zJ5_j:nth-of-type(2) {
+        order: 3
+    }
+
+    html[dir=rtl] .footer_CategoryColumn__zJ5_j:nth-of-type(3) {
+        order: 2
+    }
+
+    html[dir=rtl] .footer_CategoryColumn__zJ5_j:nth-of-type(4) {
+        order: 1
+    }
+}

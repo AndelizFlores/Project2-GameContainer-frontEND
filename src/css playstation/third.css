@@ -1,0 +1,60 @@
+.icon_Icon__k4RFh {
+    display: inline-block
+}
+
+.icon_Icon__k4RFh svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: unset;
+    fill: currentColor
+}
+
+.spinner_Spinner__iY9D2 {
+    width: var(--space-10);
+    height: var(--space-10);
+    animation: spinner_spin__uEk16 1.35s linear infinite
+}
+
+@keyframes spinner_spin__uEk16 {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+.animated-rings_AnimatedRing__52Nne:nth-child(2) {
+    --pin-pulse-scale: 2;
+    animation-delay: .3s
+}
+
+.animated-rings_AnimatedRing__52Nne:nth-child(3) {
+    --pin-pulse-scale: 1.75;
+    animation-delay: .6s
+}
+
+.animated-rings_AnimatedRing__52Nne:nth-child(4) {
+    --pin-pulse-scale: 1.4;
+    animation-delay: .9s
+}
+
+.button-row_ButtonRow__s1mAh {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4)
+}
+
+.sticker_Sticker__5fDhd {
+    display: inline-block;
+    width: auto
+}
+
+.sticker_Sticker__5fDhd svg {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    vertical-align: unset;
+    fill: currentColor
+}

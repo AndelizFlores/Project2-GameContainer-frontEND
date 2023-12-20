@@ -1,0 +1,409 @@
+.discover-games-list {
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+@media screen and (max-width: 979px) {
+    .discover-games-list {
+        width:100%
+    }
+}
+
+.discover-games-list .load-more {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.discover-games-list .load-more .heading:first-child {
+    margin-top: 0
+}
+
+.discover-games-list__controls {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    margin-bottom: 24px
+}
+
+@media screen and (max-width: 979px) {
+    .discover-games-list__controls {
+        margin-bottom:16px;
+        display: block
+    }
+}
+
+.discover-games-list__controls__left {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto
+}
+
+.discover-games-list__controls__right {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+@media screen and (max-width: 979px) {
+    .discover-games-list__controls__right {
+        margin-left:0
+    }
+}
+
+.discover__content__game-card-large+.discover__content__game-card-large {
+    margin-top: 24px
+}
+
+@media screen and (max-width: 979px) {
+    .discover__content__game-card-medium {
+        width:100%
+    }
+}
+
+.discover__content__game-card-medium+.discover__content__game-card-medium {
+    margin-top: 10px
+}
+
+.mode-select.discover-games-list__controls__right__mode-select {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto
+}
+
+@media screen and (min-width: 980px) {
+    .mode-select.discover-games-list__controls__right__mode-select {
+        margin-left:16px
+    }
+}
+
+.discover-games-list__heading {
+    text-align: left;
+    width: 100%;
+    font-weight: 700;
+    margin: 24px 0
+}
+
+@media screen and (max-width: 979px) {
+    .discover-games-list__heading {
+        font-size:32px
+    }
+}
+
+.game-card-large {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #202020;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,.07);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.07);
+    overflow: hidden;
+    width: 100%;
+    max-width: 714px
+}
+
+@media screen and (min-width: 980px) {
+    .game-card-large {
+        -webkit-transition:all .3s;
+        transition: all .3s;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.game-card-large .heading {
+    font-weight: 700
+}
+
+.game-card-large__media {
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px
+}
+
+.game-card-large__media-empty {
+    width: 100%;
+    height: 0
+}
+
+.game-card-large__media-wrapper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden
+}
+
+.game-card-large__media-wrapper>* {
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.game-card-large__main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 32px 32px 0
+}
+
+.game-card-large__main .game-card-compact__cover {
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2);
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
+}
+
+.game-card-large__main .game-card-compact__heading {
+    font-size: 32px;
+    line-height: 36px
+}
+
+.game-card-large__info {
+    padding: 16px 32px 24px
+}
+
+.game-card-large__info .heading {
+    margin-bottom: 8px
+}
+
+@media screen and (max-width: 979px) {
+    .game-card-large__info .heading {
+        margin-top:8px;
+        font-size: 24px
+    }
+}
+
+@media screen and (max-width: 979px) {
+    .game-card-large__info {
+        padding:16px 16px 24px
+    }
+}
+
+.game-card-large__about-text {
+    padding: 0 32px;
+    margin-bottom: 32px
+}
+
+.game-card-large__comments {
+    border-top: 1px solid hsla(0,0%,100%,.1);
+    padding: 16px 32px 24px 16px
+}
+
+.game-card-large__meta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 4px
+}
+
+.game-card-large__platforms {
+    opacity: .4
+}
+
+.game-card-large__platforms .platforms__platform {
+    height: 12px
+}
+
+.mode-select {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+@media screen and (max-width: 979px) {
+    .mode-select {
+        display:none
+    }
+}
+
+.mode-select__title {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: right;
+    margin-right: 16px;
+    font-size: 14px;
+    opacity: .4
+}
+
+.mode-select__items,.mode-select__title {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex
+}
+
+.mode-select__item {
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+    opacity: .4
+}
+
+.mode-select__item:hover {
+    opacity: .6
+}
+
+.mode-select__item.active {
+    opacity: 1;
+    cursor: default
+}
+
+.mode-select__item+.mode-select__item {
+    margin-left: 8px
+}
+
+.mode-select__item_list {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTYnIGhlaWdodD0nNTYnIHZpZXdCb3g9JzAgMCA1NiA1NicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+PGRlZnM+PHBhdGggZD0nTTYgMGg0NGE2IDYgMCAwMTYgNnY0NGE2IDYgMCAwMS02IDZINmE2IDYgMCAwMS02LTZWNmE2IDYgMCAwMTYtNnonIGlkPSdhJy8+PC9kZWZzPjxnIGZpbGw9J25vbmUnIGZpbGwtcnVsZT0nZXZlbm9kZCc+PG1hc2sgaWQ9J2InIGZpbGw9JyNmZmYnPjx1c2UgeGxpbms6aHJlZj0nI2EnLz48L21hc2s+PHVzZSBmaWxsPScjRkZGJyBvcGFjaXR5PScuMicgeGxpbms6aHJlZj0nI2EnLz48ZyBtYXNrPSd1cmwoI2IpJyBzdHJva2U9JyNGRkYnPjxyZWN0IHg9JzEnIHk9Jy42NjcnIHdpZHRoPSczMycgaGVpZ2h0PScyOScgcng9JzQnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDEwLjUgMTIuODMzKScvPjxyZWN0IHg9JzEnIHk9Jy41JyB3aWR0aD0nMzMnIGhlaWdodD0nMjknIHJ4PSc0JyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgxMC41IC0yMCknLz48cmVjdCB4PScxJyB5PScxLjgzMycgd2lkdGg9JzMzJyBoZWlnaHQ9JzI5JyByeD0nNCcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTAuNSA0NC42NjcpJy8+PC9nPjwvZz48L3N2Zz4=)
+}
+
+.mode-select__item_columns {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nNTYnIGhlaWdodD0nNTYnIHZpZXdCb3g9JzAgMCA1NiA1NicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB4bWxuczp4bGluaz0naHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayc+PGRlZnM+PHBhdGggZD0nTTYgMGg0NGE2IDYgMCAwMTYgNnY0NGE2IDYgMCAwMS02IDZINmE2IDYgMCAwMS02LTZWNmE2IDYgMCAwMTYtNnonIGlkPSdhJy8+PC9kZWZzPjxnIGZpbGw9J25vbmUnIGZpbGwtcnVsZT0nZXZlbm9kZCc+PG1hc2sgaWQ9J2InIGZpbGw9JyNmZmYnPjx1c2UgeGxpbms6aHJlZj0nI2EnLz48L21hc2s+PHVzZSBmaWxsPScjRkZGJyBvcGFjaXR5PScuMicgeGxpbms6aHJlZj0nI2EnLz48ZyBtYXNrPSd1cmwoI2IpJyBzdHJva2U9JyNGRkYnPjxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDguMTY3IDkuMzMzKSc+PHJlY3QgeD0nLjUnIHk9Jy41JyB3aWR0aD0nMTAuNjY3JyBoZWlnaHQ9JzE2LjUnIHJ4PSczJy8+PHJlY3QgeD0nMTQuNScgeT0nLjUnIHdpZHRoPScxMC42NjcnIGhlaWdodD0nMTYuNScgcng9JzMnLz48cmVjdCB4PScyOC41JyB5PScuNScgd2lkdGg9JzEwLjY2NycgaGVpZ2h0PScxNi41JyByeD0nMycvPjxyZWN0IHg9Jy41JyB5PScyMC4zMzMnIHdpZHRoPScxMC42NjcnIGhlaWdodD0nMTYuNScgcng9JzMnLz48cmVjdCB4PScxNC41JyB5PScyMC4zMzMnIHdpZHRoPScxMC42NjcnIGhlaWdodD0nMTYuNScgcng9JzMnLz48cmVjdCB4PScyOC41JyB5PScyMC4zMzMnIHdpZHRoPScxMC42NjcnIGhlaWdodD0nMTYuNScgcng9JzMnLz48L2c+PC9nPjwvZz48L3N2Zz4=)
+}
+
+@media screen and (max-width: 979px) {
+    .discover-page {
+        padding:0 10px
+    }
+}
+
+.discover-page .page__content {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-width: 1920px
+}
+
+@media screen and (max-width: 979px) {
+    .discover-page__content {
+        width:100%;
+        padding-bottom: 90px
+    }
+}
+
+.discover-page__content-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom: 16px
+}
+
+@media screen and (max-width: 979px) {
+    .discover-page__content-header {
+        -webkit-box-orient:vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center
+    }
+}
+
+.discover-page__content-header .heading {
+    margin: 0
+}
+
+.discover-page__content-header__right {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: auto
+}
+
+@media screen and (min-width: 980px) {
+    .discover-page__content-header__right {
+        -webkit-transform:translateY(12px);
+        transform: translateY(12px)
+    }
+}
+
+@media screen and (max-width: 979px) {
+    .discover-page__content-header__right {
+        margin-left:0
+    }
+}
