@@ -115,7 +115,8 @@ button:focus-visible {
 
 .HomePage,
 .AllGames,
-.GameDetailsPage {
+.GameDetailsPage,
+.c {
   padding-top: 10vh;
   padding-bottom: 10vh;
   overflow-x: hidden;
@@ -588,7 +589,6 @@ background-color: inherit;
 display: inline-flex;
 outline: none;
 transition: 2s;
-
 }
 
 /*Form*/

@@ -51,7 +51,7 @@ const ReviewsPage = () => {
   //     }})
 
   return reviews && games.length ? (
-    <div className="Review-Container">
+    <div className="c">
       <div className="card-ReviewContent">
       {reviews.map((review) => {  
         const game = games.find((game) => game.id === review.gameId);
