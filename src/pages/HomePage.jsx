@@ -9,8 +9,12 @@ const HomePage = () => {
     
     <div className="top-homepage">
       <div className="HomePage">
-      <h1>Games Review <img src={logo} alt="Logo" className="img-homepage" /></h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam egestas arcu sed blandit tincidunt. Pellentesque a elit porttitor, semper nibh in, tempor libero. Ut viverra non mauris eu ultricies. Duis aliquet vitae nunc ac molestie. Morbi viverra lectus sed velit finibus, a blandit velit pulvinar. Donec enim diam, suscipit ut erat id, laoreet semper nisl. Quisque vitae feugiat nibh.</p> 
+      <h1>GG Review <img src={logo} alt="Logo" className="img-homepage" /></h1>
+      <h2><span>vid·e·o game</span></h2>
+      <h3>/ˈvidēō ˌɡām/</h3>
+      <h4><i>noun</i></h4>
+      <h4><i>plural noun: videogames</i></h4>
+      <p>any of various interactive games played using a specialized electronic gaming device or a computer or mobile device and a television or other display screen, along with a means to control graphic images. any of various games played using a microchip-controlled device, as an arcade machine or handheld toy.</p> 
       <br />
       <Link to='/games'><button className="button-homepage" ></button></Link> {/*DONT WORK*/}
         {/* {GameCard} */}

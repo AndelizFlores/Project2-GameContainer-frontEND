@@ -179,7 +179,7 @@ function GameDetailsPage() {
                     platform.platform.name === "PC" &&
                     platform["requirements_en"] ? (
                       <>
-                        <h3>Requirement</h3>
+                        <h3>Requirements</h3>
                         {/* <p> {platform.platform.name} </p>{" "} */}
                         <div
                           dangerouslySetInnerHTML={{
