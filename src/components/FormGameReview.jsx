@@ -47,7 +47,7 @@ const FormGameReview = ({ gameId, setReviews }) => {
       
       <form name="reviewForm" onSubmit={handleSubmit}>
         <label>
-          Gamer said your opinion
+        Leave your review here
           <textarea
           onChange={(e) => setReview(prev => ({...prev, review: e.target.value}))}
             className="Game-review"

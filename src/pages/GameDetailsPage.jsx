@@ -204,7 +204,7 @@ function GameDetailsPage() {
               </div>
             )}
           </div> */}
-            <h3>Store</h3>
+            <h3>Stores</h3>
             <div className="stores-container">
               {game.stores.length > 0 && (
                 <div className="stores">
