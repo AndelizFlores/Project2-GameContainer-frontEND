@@ -8,7 +8,7 @@ import GameDetailsPage from "./pages/GameDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 
 import "./App.css";
-// import ReviewsPage from "./pages/ReviewsPage";
+import ReviewsPage from "./pages/ReviewsPage";
 
 function App() {
   // const { games } = useContext(GameContext)
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/games" element={<AllGames />} />
           <Route path="/games/details/:gameId" element={<GameDetailsPage />} />
-          {/* <Route path="/review" element={<ReviewsPage />} /> */}
+          <Route path="/review" element={<ReviewsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 

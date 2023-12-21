@@ -704,6 +704,60 @@ margin-left: -0.1rem;
 box-shadow: inset 0 0 0 1px #009cff;
 outline: none;
 }
+
+/*Review Page*/
+.card-ReviewContent{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.card-Review{
+  width: 325px;
+  background-color: #1b1e55;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+  margin: 20px
+}
+.card-Review img{
+  width: 100%;
+  height: auto;
+}
+.result-reviews{
+  padding: 16px;
+}
+.result-reviews h2{
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+.result-reviews p{
+  color: #666;
+  font-size: 15px;
+  line-height: 1.3;
+  color: #fff;
+}
+.result-reviews .btn-reviewsLast{
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 16px;
+  color: #fff;
+  cursor: pointer;
+}
+.result-reviews .btn-reviewsLast:hover{
+  background: rgb(24, 24, 24);
+  color: #911414;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #6333e6,
+              0 0 25px #0f54af,
+              0 0 25px #040652,
+              0 0 25px #041b83
+}
+
 /* .form-container button{
   display: flex;
   width: 95px;
